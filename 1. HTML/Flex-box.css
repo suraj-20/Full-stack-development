@@ -64,7 +64,9 @@ body {
     border: 1px solid darkblue;
     width: 100px;
     height: 100px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2em;
     color: white;
     font-weight: bold;
