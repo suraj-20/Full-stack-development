@@ -21,4 +21,5 @@ function testDeclaration(){
 // Declaring using var has function lavel scope.
 // Declaring using let has block lavel scope. 
 
+// Execute(or declare) the function.
 testDeclaration();
