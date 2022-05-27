@@ -4,7 +4,7 @@
 // var means variable.
 
 var num = 10;
-num = 20;
+num = 30;
 console.log(num);
 
 // How to declare a const in JS ?
