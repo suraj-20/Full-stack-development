@@ -1,7 +1,7 @@
 
 // Equality Operators.
 
-// In JS there are 2 equality operators --> "==", "=== [Strict Equality Operators]".
+// In JS there are 2 equality operators --> "== [General Equality Operators]", "=== [Strict Equality Operators]".
 
 // == [Checks for equality of values.]
 // === [Checks for equality of values and equality of dataTypes.]
