@@ -37,24 +37,35 @@ console.log(arrayOfNumbers);  //[10, 20, 41, 21, 93, 54]
 // 9. How to get size of an array.
 console.log(arrayOfNumbers.length);  // 6
 
-// 10. How to eccess the first array element.
+// 10. How to get part of an array.
+console.log(arrayOfNumbers.slice(1,4));  // [ 20, 41, 21 ]
+
+// 11. How to eccess the first array element.
 console.log(arrayOfNumbers[0]);  // 10
 
-// 11. How to change an array elements.
+// 12. How to change an array elements.
 arrayOfNumbers[0] = 25;
 console.log(arrayOfNumbers);  // [25, 20, 41, 21, 93, 54]
 
-// 12. Concating arrays.
+// 13. Concating arrays.
 const arrayOfNumbers2 = [60, 70, 80];
 const myResult = arrayOfNumbers.concat(arrayOfNumbers2);
 console.log(myResult);  // [25, 20, 41, 21, 93, 54, 60, 70, 80]
 
-// 13. Marging an array with values.
+// 14. Marging an array with values.
 const myResult2 = arrayOfNumbers.concat(80);
 console.log(myResult2);  // [25, 20, 41, 21, 93, 54, 80]
 
-// 14. Shorting an array.
+// 15. Shorting an array.
 console.log(arrayOfNumbers.sort());  // [ 20, 21, 25, 41, 54, 93 ]
 
-// 15. Reversing an array.
+// 16. Reversing an array.
 console.log(arrayOfNumbers.reverse());  // [ 93, 54, 41, 25, 21, 20 ]
+
+// 17. How to find an element in array based on condition.
+const result = arrayOfNumbers.find(e=> e==41);
+console.log(result);  // 41
+
+// 18. How to find an multiple elements in array based on condition.
+const numberGreaterThan40 = arrayOfNumbers.filter(e=> e>40);
+console.log(numberGreaterThan40);  // [ 93, 54, 41 ]
