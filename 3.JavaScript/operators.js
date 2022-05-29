@@ -1,5 +1,5 @@
 
-// Equality Operators.
+// Operators.
 
 // In JS there are 2 equality operators --> "== [General Equality Operators]", "=== [Strict Equality Operators]".
 
