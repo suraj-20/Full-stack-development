@@ -15,6 +15,9 @@ console.log(d1);
 if(new Date().getHours() < 12){
     greating = ("Good Morning");
 }
+if(new Date().getHours() < 18){
+    greating = ("Good Afternoon");
+}
 console.log(greating);
 
 // 2. If hours is less then 12P.M then print "Good Morning" else print "Good Afternoon".
@@ -40,7 +43,7 @@ console.log(print);
 
 if(new Date().getHours() < 12){
     greating = ("Good Morning");
-}else if (new Date().getHours() < 6){
+}else if (new Date().getHours() < 18){
     greating = ("Good Afternoon");
 }else{
     greating = ("Good Evening");
@@ -102,3 +105,18 @@ switch(new Date().getDay()){
         break;
 }
 console.log(day);
+
+// 5. Using break statement.
+
+let i = 0;
+for(let i = 0; i < 10; i++){
+    if(i ==  5) {break}
+    console.log("This is number " + i);
+}
+
+// 6. Using continue statement.
+
+for(let x1 = 0; x1 < 10; x1++){
+    if(x1 == 3) {continue}
+    console.log(x1);
+}
