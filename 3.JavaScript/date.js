@@ -22,4 +22,8 @@ console.log(currentDate.getHours());
 // 6. How to get day from date.
 console.log(currentDate.getDay());  // [0 is for Sunday, 1 for Monday, 2 is for Tuesday,...]
 
+// 7. How to get date.
+console.log(currentDate.getDate());
+
+
 // Most usefull library to work with dates is - moment JS.
