@@ -9,7 +9,7 @@ function calculteTotalPrice(costOfFood, Taxes, diliveryCharges=10){
 }
 
 // For General MemberShip.
-calculteTotalPrice(400, 20, 30);
+calculteTotalPrice(400, 20, 30);  // 450
 
 // For Pro MemberShip.
-calculteTotalPrice(400, 20);
+calculteTotalPrice(400, 20);  // 430
