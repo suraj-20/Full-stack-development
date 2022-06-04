@@ -30,6 +30,27 @@ function getCardDetails(card){
     )
 }
 
+// Using Promise Chaning.
+function getCardDetails(card){
+    validateCard(card)
+    .then(
+        (resolve)=>{
+            console.log(resolve);
+            return resolve;
+        }
+    )
+    .then(
+        ()=>{
+            deductAmount();
+            return;
+        }
+    ).catch(
+        (reject)=>{
+            console.log(reject);
+        }
+    )
+}
+
 function deductAmount(amount){
     console.log("Amount is deducted")
 }
