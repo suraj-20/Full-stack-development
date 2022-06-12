@@ -22,3 +22,15 @@ exports.get = async(req, res)=>{
         return -1;
     }
 }
+
+exports.getByLocation = async(_location)=>{
+    const collection = mongodbConfig.getCollection("Restaurant");
+    try{
+        const filterExpression = {location:_location}
+        const result = await collection.find(filterExpression).toArray();
+        return result;
+    }catch(err){
+        console.log(err);
+        return -1;
+    }
+}

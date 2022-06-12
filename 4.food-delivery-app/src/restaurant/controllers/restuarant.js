@@ -20,3 +20,12 @@ exports.get = async (req, res)=>{
         return res.send(result);
     }
 }
+
+exports.getByLocation = async (req, res)=>{
+    const result = await repo.getByLocation(req.params.city);
+    if(result==-1){
+        return res.send("Failed to get restaurant")
+    }else{
+        return res.send(result);
+    }
+}
