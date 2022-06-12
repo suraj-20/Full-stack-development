@@ -28,6 +28,7 @@ exports.getByLocation = async(_location)=>{
     try{
         const filterExpression = {location:_location}
         const result = await collection.find(filterExpression).toArray();
+        console.log(result);
         return result;
     }catch(err){
         console.log(err);
