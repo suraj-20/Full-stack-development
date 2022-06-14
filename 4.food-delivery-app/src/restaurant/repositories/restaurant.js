@@ -1,5 +1,6 @@
 
 const mongodbConfig = require("../../../config/mongodb")
+const ObjectId = require("mongodb").ObjectId;
 
 module.exports.add = async (restaurant)=>{
     const collection = mongodbConfig.getCollection("Restaurant");
@@ -34,4 +35,31 @@ exports.getByLocation = async(_location)=>{
         console.log(err);
         return -1;
     }
+}
+
+module.exports.update = async (restaurant)=>{
+    const collection = mongodbConfig.getCollection("Restaurant");
+    try{
+        // ObjectId converts string to ObjectId.
+        const filter = {_id:ObjectId(restaurant._id)};
+        // set operator tells mongodb to upadate these data items.
+        const update = { $set: {name: restaurant.name, location: restaurant.location, contact: restaurant.contact}}; 
+        await collection.findOneAndUpdate(filter, update);
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+    return true;
+}
+
+module.exports.delete = async (id)=>{
+    const collection = mongodbConfig.getCollection("Restaurant");
+    try{
+        const filter = {_id:ObjectId(id)}
+        await collection.findOneAndDelete(filter);
+    }catch(err){
+        console.log(err);
+        return false;
+    }
+    return true;
 }

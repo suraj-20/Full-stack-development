@@ -29,3 +29,23 @@ exports.getByLocation = async (req, res)=>{
         return res.send(result);
     }
 }
+
+exports.update = async(req, res)=>{
+    const restaurant = new Restaurant(req.body.name, req.body.location, req.body.contact, req.body.id);
+    const result = await repo.update(restaurant);
+    if(result){
+        return res.send("Restaurant is updated");
+    }else{
+        return res.send("Failed to update restaurant");
+    }
+}
+
+exports.delete = async(req, res)=>{
+    const id = req.params.id;
+    const result = await repo.delete(id);
+    if(result){
+        return res.send("Restaurant is deleted");
+    }else{
+        return res.send("Failed to delete restaurant");
+    }
+}
