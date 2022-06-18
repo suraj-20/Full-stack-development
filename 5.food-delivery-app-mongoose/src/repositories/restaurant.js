@@ -11,9 +11,26 @@ exports.add = async (restaurant)=>{
     }
 }
 
-exports.get = async ()=>{
+exports.get = async (page)=>{
     try{
-        const result = await Restaurant.find();
+        const result = await Restaurant.aggregate(
+            [
+                {
+                    $lookup:{
+                        from: "menus",
+                        localField: "_id",
+                        foreignField: "restauratID",
+                        pipeline:[
+                            // {$match: {type: "Breakfast"}},
+                            {$project: {restauratID:0}}
+                        ],
+                        as: "menus"
+                    }
+                },
+                {$skip: (page-1)*5},
+                {$limit: 5}
+            ]
+        );
         return result;
     }catch(err){
         console.log(err);
