@@ -1,0 +1,26 @@
+
+
+.header {
+    width: 100%;
+    height: 350px;
+    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/t_focal-758x379,f_auto,q_auto:best/rockcms/2022-03/plant-based-food-mc-220323-02-273c7b.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    width: 40%;
+    margin: 10px;
+}
+
+.form-select {
+    width: 20%;
+}
