@@ -63,3 +63,14 @@ module.exports.delete = async (id)=>{
     }
     return true;
 }
+
+exports.filter = async (name, location)=>{
+    const collection = mongodbConfig.getCollection("Restaurant");
+    const results =  await collection.find({
+        $and: [
+            {name: {$regex: name}},
+            {location: location}
+        ]
+    }).toArray();
+    return results;
+}
